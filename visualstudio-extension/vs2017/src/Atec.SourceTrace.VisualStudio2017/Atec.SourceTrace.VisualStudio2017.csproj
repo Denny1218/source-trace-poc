@@ -1,0 +1,74 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>net46</TargetFramework>
+    <LangVersion>latest</LangVersion>
+    <Nullable>enable</Nullable>
+    <RootNamespace>Atec.SourceTrace.VisualStudio2017</RootNamespace>
+    <AssemblyName>Atec.SourceTrace.VisualStudio2017</AssemblyName>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <Prefer32Bit>false</Prefer32Bit>
+    <GeneratePkgDefFile>true</GeneratePkgDefFile>
+    <UseCodebase>true</UseCodebase>
+    <IncludeAssemblyInVSIXContainer>true</IncludeAssemblyInVSIXContainer>
+    <IncludeDebugSymbolsInVSIXContainer>false</IncludeDebugSymbolsInVSIXContainer>
+    <IncludeDebugSymbolsInLocalVSIXDeployment>false</IncludeDebugSymbolsInLocalVSIXDeployment>
+    <CopyBuildOutputToOutputDirectory>true</CopyBuildOutputToOutputDirectory>
+    <CopyOutputSymbolsToOutputDirectory>false</CopyOutputSymbolsToOutputDirectory>
+    <CreateVsixContainer>true</CreateVsixContainer>
+    <DeployExtension>false</DeployExtension>
+    <TargetVsixContainerName>source-trace-visualstudio2017-0.1.3.vsix</TargetVsixContainerName>
+    <UseWPF>true</UseWPF>
+    <EnableDefaultEmbeddedResourceItems>false</EnableDefaultEmbeddedResourceItems>
+  </PropertyGroup>
+  <ItemGroup>
+    <PackageReference Include="Microsoft.NETFramework.ReferenceAssemblies.net46" Version="1.0.3" PrivateAssets="all" />
+    <PackageReference Include="Microsoft.VisualStudio.SDK" Version="15.0.1" ExcludeAssets="runtime" />
+    <!-- Pack tooling only (dotnet msbuild). Runtime target remains VS2017 via SDK 15.0.1 + 15.x manifest. -->
+    <PackageReference Include="Microsoft.VSSDK.BuildTools" Version="17.9.3184">
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+      <PrivateAssets>all</PrivateAssets>
+    </PackageReference>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Atec.SourceTrace.Core\Atec.SourceTrace.Core.csproj" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="source.extension.vsixmanifest">
+      <SubType>Designer</SubType>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
+    <Content Include="Icons\icon16.png">
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
+    <Content Include="Icons\ExtensionIcon128.png">
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
+    <VSCTCompile Include="AtecSourceTrace.vsct">
+      <ResourceName>Menus.ctmenu</ResourceName>
+    </VSCTCompile>
+    <EmbeddedResource Include="VSPackage.resx">
+      <MergeWithCTO>true</MergeWithCTO>
+      <ManifestResourceName>VSPackage</ManifestResourceName>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="System.Design" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="System.Xaml" />
+    <Reference Include="WindowsBase" />
+    <Reference Include="System.Windows.Forms" />
+  </ItemGroup>
+  <Import Project="$(VSToolsPath)\VSSDK\Microsoft.VsSDK.targets" Condition="Exists('$(VSToolsPath)\VSSDK\Microsoft.VsSDK.targets')" />
+  <!-- Always regenerate pkgdef from assembly attributes (stale Menus version breaks ResourceVersion A/B). -->
+  <Target Name="EnsurePkgDef" AfterTargets="Build" BeforeTargets="CreateVsixContainer" Condition="'$(GeneratePkgDefFile)'=='true'">
+    <PropertyGroup>
+      <_PkgDefPath>$(IntermediateOutputPath)$(TargetName).pkgdef</_PkgDefPath>
+      <_CreatePkgDefExe>$(VsSDKToolsPath)\CreatePkgDef.exe</_CreatePkgDefExe>
+    </PropertyGroup>
+    <MakeDir Directories="$(IntermediateOutputPath)" Condition="!Exists('$(IntermediateOutputPath)')" />
+    <Delete Files="$(_PkgDefPath)" Condition="Exists('$(_PkgDefPath)')" />
+    <Exec Condition="Exists('$(_CreatePkgDefExe)')" Command="&quot;$(_CreatePkgDefExe)&quot; /out=&quot;$(_PkgDefPath)&quot; /codebase &quot;$(TargetPath)&quot;" />
+  </Target>
+</Project>

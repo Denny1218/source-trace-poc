@@ -1,0 +1,6 @@
+<Project>
+  <!-- Ensure VSSDK VSCT/resource manifest writes under obj/, not C:\resources.json -->
+  <PropertyGroup>
+    <IntermediateOutputPath>obj\$(Configuration)\$(TargetFramework)\</IntermediateOutputPath>
+  </PropertyGroup>
+</Project>

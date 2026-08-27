@@ -1,0 +1,1193 @@
+.ppt-cache-viewer {
+
+  padding: 0.75rem 1rem;
+
+  max-width: 1200px;
+
+}
+
+
+
+.ppt-cache-viewer h2 {
+
+  margin-top: 0;
+
+}
+
+
+
+.ppt-cache-controls {
+
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 0.55rem;
+
+  margin-bottom: 0.75rem;
+
+  background: #fff;
+
+  border-radius: 10px;
+
+  padding: 0.75rem;
+
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+
+}
+
+
+
+.search-row-primary {
+
+  display: flex;
+
+  flex-wrap: wrap;
+
+  gap: 0.6rem;
+
+  align-items: flex-end;
+
+}
+
+
+
+.search-row-primary label {
+
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 0.25rem;
+
+  font-size: 0.85rem;
+
+  font-weight: 600;
+
+}
+
+
+
+.search-row-primary select,
+
+.search-row-primary input {
+
+  min-height: 2rem;
+
+  padding: 0.38rem 0.55rem;
+
+  border: 1px solid #d0d7de;
+
+  border-radius: 6px;
+
+  font-size: 0.85rem;
+
+}
+
+
+
+.search-row-primary .keyword-field {
+
+  flex: 1 1 360px;
+
+}
+
+
+
+.search-row-primary .keyword-field input {
+
+  width: 100%;
+
+}
+
+
+
+.keyword-label-row {
+
+  display: flex;
+
+  align-items: baseline;
+
+  gap: 0.5rem;
+
+  flex-wrap: wrap;
+
+}
+
+
+
+.field-help-inline {
+
+  color: #57606a;
+
+  font-size: 0.75rem;
+
+  font-weight: 400;
+
+}
+
+
+
+.analyze-btn {
+
+  align-self: flex-end;
+
+  background: #0969da;
+
+  border-color: #0969da;
+
+  color: #fff;
+
+  padding: 0.42rem 0.9rem;
+
+  border-radius: 6px;
+
+  cursor: pointer;
+
+}
+
+
+
+.analyze-btn:disabled {
+
+  opacity: 0.6;
+
+  cursor: not-allowed;
+
+}
+
+
+
+.period-filter {
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 0.5rem;
+
+  flex-wrap: wrap;
+
+}
+
+
+
+.period-filter label {
+
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 0.25rem;
+
+  font-size: 0.85rem;
+
+}
+
+
+
+.period-toggle {
+
+  display: inline-flex;
+
+  align-items: center;
+
+  gap: 4px;
+
+  white-space: nowrap;
+
+  flex-direction: row;
+
+  font-weight: 600;
+
+  padding-top: 1.15rem;
+
+}
+
+
+
+.period-filter input[type="date"]:disabled {
+
+  opacity: 0.65;
+
+  background: #f6f8fa;
+
+  color: #57606a;
+
+  cursor: not-allowed;
+
+}
+
+
+
+.ppt-analysis-result {
+
+  background: #fff;
+
+  border-radius: 10px;
+
+  padding: 0.75rem;
+
+  margin-bottom: 0.75rem;
+
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+
+}
+
+
+
+.analysis-stats {
+
+  display: flex;
+
+  flex-wrap: wrap;
+
+  gap: 0.75rem;
+
+  padding-left: 1.1rem;
+
+  margin: 0.35rem 0 0.75rem;
+
+  font-size: 0.85rem;
+
+}
+
+
+
+.current-analysis-docs {
+
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 0.75rem;
+
+}
+
+
+
+.analysis-doc-group {
+
+  border: 1px solid #e1e4e8;
+
+  border-radius: 8px;
+
+  padding: 0.6rem 0.75rem;
+
+}
+
+
+
+.analysis-doc-group h5 {
+
+  margin: 0 0 0.2rem;
+
+  font-size: 0.85rem;
+
+}
+
+
+
+.doc-path {
+
+  margin: 0 0 0.5rem;
+
+  font-family: Consolas, "Courier New", monospace;
+
+  font-size: 0.75rem;
+
+  color: #57606a;
+
+  word-break: break-all;
+
+  overflow-wrap: anywhere;
+
+}
+
+
+
+.analysis-slide-item {
+
+  border-top: 1px solid #eef0f3;
+
+  padding: 0.45rem 0;
+
+  list-style: none;
+
+}
+
+
+
+.analysis-slide-item:first-child {
+
+  border-top: none;
+
+}
+
+
+
+.slide-meta {
+
+  font-size: 0.85rem;
+
+}
+
+
+
+.slide-score {
+
+  margin-left: 0.5rem;
+
+  color: #57606a;
+
+  font-size: 0.78rem;
+
+}
+
+
+
+.slide-keywords {
+
+  font-size: 0.78rem;
+
+  color: #444;
+
+  margin: 0.2rem 0;
+
+}
+
+
+
+.slide-content-preview {
+
+  max-height: 120px;
+
+  overflow: auto;
+
+  white-space: pre-wrap;
+
+  word-break: break-word;
+
+  font-size: 0.8rem;
+
+  background: #f6f8fa;
+
+  border-radius: 6px;
+
+  padding: 0.45rem;
+
+  margin: 0.25rem 0 0;
+
+}
+
+
+
+.section-hint {
+
+  color: #57606a;
+
+  font-size: 0.8rem;
+
+  margin: 0 0 0.5rem;
+
+}
+
+
+
+.empty {
+
+  color: #6a737d;
+
+  font-size: 0.85rem;
+
+}
+
+
+
+.ppt-analysis-debug table {
+
+  width: 100%;
+
+  border-collapse: collapse;
+
+  font-size: 0.9rem;
+
+}
+
+
+
+.ppt-analysis-debug th,
+
+.ppt-analysis-debug td {
+
+  border: 1px solid #ccc;
+
+  padding: 0.4rem 0.5rem;
+
+  text-align: left;
+
+}
+
+
+
+/* --- Summary --- */
+
+.ci-summary-bar {
+
+  display: flex;
+
+  flex-wrap: wrap;
+
+  align-items: baseline;
+
+  gap: 0.55rem 0.75rem;
+
+  margin-bottom: 0.65rem;
+
+}
+
+
+
+.ci-summary-count {
+
+  font-size: 1.1rem;
+
+  font-weight: 700;
+
+  color: #0969da;
+
+}
+
+
+
+.ci-summary-equipment {
+
+  font-size: 0.78rem;
+
+  font-weight: 600;
+
+  color: #24292f;
+
+  background: #eef2f5;
+
+  border-radius: 999px;
+
+  padding: 0.12rem 0.55rem;
+
+}
+
+
+
+.ci-summary-sub {
+
+  font-size: 0.8rem;
+
+  color: #57606a;
+
+}
+
+
+
+.ci-summary-fallback {
+
+  font-size: 0.75rem;
+
+  color: #9a6700;
+
+  background: #fff8c5;
+
+  border-radius: 999px;
+
+  padding: 0.1rem 0.5rem;
+
+}
+
+
+
+/* --- Flat change item list --- */
+
+.ci-result-list {
+
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 0.55rem;
+
+}
+
+
+
+.ci-card {
+
+  border: 1px solid #e1e4e8;
+
+  border-left: 3px solid #0969da;
+
+  border-radius: 6px;
+
+  padding: 0.55rem 0.7rem;
+
+  background: #fbfcfe;
+
+}
+
+
+
+.ci-card-head {
+
+  display: flex;
+
+  align-items: flex-start;
+
+  justify-content: space-between;
+
+  gap: 0.6rem;
+
+  flex-wrap: wrap;
+
+  margin-bottom: 0.25rem;
+
+}
+
+
+
+.ci-title {
+
+  margin: 0;
+
+  font-size: 1rem;
+
+  font-weight: 700;
+
+  line-height: 1.35;
+
+  color: #24292f;
+
+  flex: 1 1 12rem;
+
+  min-width: 0;
+
+}
+
+
+
+.ci-relevance {
+
+  flex-shrink: 0;
+
+  font-size: 0.72rem;
+
+  font-weight: 600;
+
+  border-radius: 999px;
+
+  padding: 0.15rem 0.55rem;
+
+  white-space: nowrap;
+
+}
+
+
+
+.ci-relevance-high {
+
+  background: #dafbe1;
+
+  color: #116329;
+
+}
+
+
+
+.ci-relevance-medium {
+
+  background: #fff8c5;
+
+  color: #7d4e00;
+
+}
+
+
+
+.ci-relevance-low {
+
+  background: #f6f8fa;
+
+  color: #57606a;
+
+  border: 1px solid #d0d7de;
+
+}
+
+
+
+.ci-meta-primary {
+
+  margin: 0.15rem 0 0.2rem;
+
+  font-size: 0.75rem;
+
+  color: #57606a;
+
+}
+
+
+
+.ci-meta-scopes {
+
+  margin: 0 0 0.35rem;
+
+  font-size: 0.75rem;
+
+  line-height: 1.4;
+
+  display: flex;
+
+  flex-wrap: wrap;
+
+  gap: 0.35rem 0.5rem;
+
+}
+
+
+
+.ci-meta-scopes-label {
+
+  font-weight: 700;
+
+  color: #444;
+
+  flex-shrink: 0;
+
+}
+
+
+
+.ci-meta-scopes-value {
+
+  color: #57606a;
+
+  min-width: 0;
+
+  word-break: break-word;
+
+}
+
+
+
+.ci-field-grid {
+
+  display: grid;
+
+  grid-template-columns: 64px minmax(0, 1fr);
+
+  gap: 0.2rem 0.5rem;
+
+  margin: 0.35rem 0;
+
+  font-size: 0.82rem;
+
+  line-height: 1.45;
+
+}
+
+
+
+.ci-field-grid-test {
+
+  margin-top: 0.25rem;
+
+}
+
+
+
+.ci-field-label {
+
+  font-weight: 700;
+
+  color: #24292f;
+
+}
+
+
+
+.ci-field-label-tobe {
+
+  color: #1a7f37;
+
+}
+
+
+
+.ci-field-value {
+
+  min-width: 0;
+
+  word-break: break-word;
+
+}
+
+
+
+.ci-field-value-tobe {
+
+  color: #1a7f37;
+
+}
+
+
+
+.ci-sources-block {
+
+  display: grid;
+
+  grid-template-columns: 64px minmax(0, 1fr);
+
+  gap: 0.15rem 0.5rem;
+
+  margin: 0.3rem 0;
+
+  font-size: 0.8rem;
+
+}
+
+
+
+.ci-source-list {
+
+  list-style: none;
+
+  margin: 0;
+
+  padding: 0;
+
+}
+
+
+
+.ci-source-entry {
+
+  margin: 0.15rem 0 0.35rem;
+
+}
+
+
+
+.ci-src-path,
+
+.ci-func {
+
+  font-family: Consolas, "Courier New", monospace;
+
+  font-size: 0.78rem;
+
+  word-break: break-all;
+
+}
+
+
+
+.ci-src-path {
+
+  display: block;
+
+  background: #f6f8fa;
+
+  border-radius: 4px;
+
+  padding: 0.1rem 0.35rem;
+
+  margin-bottom: 0.1rem;
+
+}
+
+
+
+.ci-func-list {
+
+  list-style: none;
+
+  margin: 0.05rem 0 0;
+
+  padding: 0 0 0 0.35rem;
+
+}
+
+
+
+.ci-func-item {
+
+  margin: 0.08rem 0;
+
+}
+
+
+
+.ci-func-tree {
+
+  color: #8c959f;
+
+  font-family: Consolas, "Courier New", monospace;
+
+  font-size: 0.76rem;
+
+}
+
+
+
+.ci-func {
+
+  background: #eef2f5;
+
+  border-radius: 4px;
+
+  padding: 0.02rem 0.3rem;
+
+}
+
+
+
+.ci-highlight {
+
+  background: #fff3a3;
+
+  border-radius: 3px;
+
+  padding: 0 0.1rem;
+
+}
+
+
+
+.ci-card-footer {
+
+  display: flex;
+
+  flex-wrap: wrap;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  gap: 0.4rem 0.75rem;
+
+  margin-top: 0.45rem;
+
+  padding-top: 0.4rem;
+
+  border-top: 1px solid #eef0f3;
+
+  font-size: 0.75rem;
+
+}
+
+
+
+.ci-copy-feedback {
+
+  flex-basis: 100%;
+
+  margin: 0;
+
+  font-size: 0.72rem;
+
+}
+
+
+
+.ci-copy-feedback-success {
+
+  color: #1a7f37;
+
+}
+
+
+
+.ci-copy-feedback-error {
+
+  color: #b00020;
+
+}
+
+
+
+.ci-source-info {
+
+  display: flex;
+
+  flex-wrap: wrap;
+
+  align-items: baseline;
+
+  gap: 0.35rem 0.5rem;
+
+  min-width: 0;
+
+  color: #57606a;
+
+}
+
+
+
+.ci-source-label {
+
+  font-weight: 700;
+
+  color: #444;
+
+}
+
+
+
+.ci-source-filename {
+
+  color: #24292f;
+
+  max-width: 100%;
+
+  overflow: hidden;
+
+  text-overflow: ellipsis;
+
+  white-space: nowrap;
+
+}
+
+
+
+.ci-source-slide {
+
+  color: #8c959f;
+
+}
+
+
+
+.ci-card-actions {
+
+  display: flex;
+
+  gap: 0.35rem;
+
+  flex-shrink: 0;
+
+}
+
+
+
+.ci-action-btn {
+
+  background: #f6f8fa;
+
+  border: 1px solid #d0d7de;
+
+  border-radius: 6px;
+
+  color: #24292f;
+
+  cursor: pointer;
+
+  font-size: 0.74rem;
+
+  padding: 0.2rem 0.55rem;
+
+}
+
+
+
+.ci-action-btn:hover {
+
+  background: #eef2f5;
+
+}
+
+
+
+.ci-expand {
+
+  margin-top: 0.35rem;
+
+  padding: 0.4rem 0.5rem;
+
+  background: #f6f8fa;
+
+  border-radius: 6px;
+
+  font-size: 0.75rem;
+
+}
+
+
+
+.ci-expand-path .ci-path-full {
+
+  display: block;
+
+  margin-top: 0.2rem;
+
+  font-family: Consolas, "Courier New", monospace;
+
+  font-size: 0.72rem;
+
+  word-break: break-all;
+
+  overflow-wrap: anywhere;
+
+  color: #57606a;
+
+}
+
+
+
+.ci-expand-label {
+
+  font-weight: 700;
+
+  color: #444;
+
+}
+
+
+
+.ci-detail-dl {
+
+  display: grid;
+
+  grid-template-columns: auto 1fr;
+
+  gap: 0.15rem 0.65rem;
+
+  margin: 0;
+
+}
+
+
+
+.ci-detail-dl dt {
+
+  font-weight: 700;
+
+  color: #57606a;
+
+}
+
+
+
+.ci-detail-dl dd {
+
+  margin: 0;
+
+  color: #24292f;
+
+}
+
+
+
+.ci-collapse-toggles {
+
+  display: flex;
+
+  flex-wrap: wrap;
+
+  gap: 0.5rem 1rem;
+
+  margin-bottom: 0.5rem;
+
+}
+
+
+
+.ci-debug-toggle {
+
+  background: none;
+
+  border: none;
+
+  color: #0969da;
+
+  cursor: pointer;
+
+  font-size: 0.82rem;
+
+  padding: 0.2rem 0;
+
+}
+
+
+
+.ppt-analysis-debug {
+
+  background: #f6f8fa;
+
+  border-radius: 10px;
+
+  padding: 0.75rem;
+
+  margin-bottom: 0.75rem;
+
+}
+
+
+
+.ppt-analysis-debug h3 {
+
+  margin-top: 0;
+
+  font-size: 0.95rem;
+
+}
+
+
+
+.ppt-analysis-debug h4 {
+
+  margin: 0.75rem 0 0.35rem;
+
+  font-size: 0.85rem;
+
+}
+
+
+
+.ppt-cache-panel {
+
+  margin-top: 0;
+
+}
+
+
+
+.slide-block {
+
+  margin: 0.75rem 0;
+
+  padding: 0.65rem;
+
+  border: 1px solid #ddd;
+
+  border-radius: 4px;
+
+}
+
+
+
+.slide-block pre {
+
+  white-space: pre-wrap;
+
+  word-break: break-word;
+
+  font-size: 0.85rem;
+
+}
+
+
+
+.error {
+
+  color: #b00020;
+
+}
+
+

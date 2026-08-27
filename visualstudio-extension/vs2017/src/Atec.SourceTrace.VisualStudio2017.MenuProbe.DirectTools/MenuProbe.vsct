@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CommandTable xmlns="http://schemas.microsoft.com/VisualStudio/2005-10-18/CommandTable" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <Extern href="stdidcmd.h"/>
+  <Extern href="vsshlids.h"/>
+
+  <Commands package="guidMenuProbePackage">
+    <Groups>
+      <Group guid="guidMenuProbeCmdSet" id="MainMenuGroup" priority="0x0600">
+        <!-- DirectTools A/B: only change vs MenuProbe 0.0.1 — Control-identical Tools parent -->
+        <Parent guid="guidSHLMainMenu" id="IDM_VS_MENU_TOOLS"/>
+      </Group>
+    </Groups>
+
+    <Buttons>
+      <Button guid="guidMenuProbeCmdSet" id="ToolsMenuCmd" priority="0x0100" type="Button">
+        <Parent guid="guidMenuProbeCmdSet" id="MainMenuGroup"/>
+        <Strings>
+          <ButtonText>ATEC Source Trace Test</ButtonText>
+        </Strings>
+      </Button>
+    </Buttons>
+  </Commands>
+
+  <Symbols>
+    <GuidSymbol name="guidMenuProbePackage" value="{c1eb0af7-1b3d-4b1e-8f77-cc77d8c71001}" />
+    <GuidSymbol name="guidMenuProbeCmdSet" value="{60f3df3d-66a7-4bc8-9d2f-c0f7fd7a1002}">
+      <IDSymbol name="MainMenuGroup" value="0x1030"/>
+      <IDSymbol name="ToolsMenuCmd" value="0x0100"/>
+    </GuidSymbol>
+  </Symbols>
+</CommandTable>

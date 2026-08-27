@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <parent>
+    <groupId>com.atec.sourcetrace</groupId>
+    <artifactId>eclipse-plugin-parent</artifactId>
+    <version>0.1.1-SNAPSHOT</version>
+  </parent>
+  <artifactId>com.atec.sourcetrace.eclipse</artifactId>
+  <packaging>eclipse-plugin</packaging>
+  <name>ATEC Source Trace Eclipse Plug-in</name>
+</project>

@@ -1,0 +1,101 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CommandTable language="ko-KR" xmlns="http://schemas.microsoft.com/VisualStudio/2005-10-18/CommandTable">
+  <Commands>
+    <Groups>
+      <Group guid="guidAtecSourceTraceCmdSet" id="MainMenuGroup" priority="0x0600">
+        <Parent guid="guidSHLMainMenu" id="IDG_VS_MM_TOOLSADDINS" />
+      </Group>
+      <Group guid="guidAtecSourceTraceCmdSet" id="AtecMenuGroup" priority="0x0600">
+        <Parent guid="guidSHLMainMenu" id="IDM_VS_CTXT_CODEWIN" />
+      </Group>
+    </Groups>
+    <Bitmaps>
+      <Bitmap guid="guidImages" usedList="bmpIcon16">
+        <Image pixelFormat="Format32bppArgb" width="16" height="16">AAAAAA03F7F5F587FAF9F9E8FBFBFAF2FAFAF9F3FAF9F9F4FAF9F9F4FAF9F9F4FAF9F9F4FAF9F9F4FAF9F9F4FAFAF9F3FBFBFAF2FAF9F9E8F7F5F587AAAAAA03F7F5F586FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF7F5F586FAF9F9F0FEFEFEFDFEFEFEFDFFFEFFFFFEFEFEFFFEFEFEFFFEFEFEFFFEFEFEFFFEFEFEFFFEFEFEFFFEFEFEFFFEFEFEFFFEFEFEFFFEFEFEFDFEFEFEFDFAF9F9F0FAF9F9F4FFFFFFFFFEFEFEFFFFFEFFFFFEFEFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFEFEFEFFFFFFFFFFFAF9F9F4FAF9F9F3FFFFFFFFFEFEFEFFFFFFFFFFFFFFFFFFFAF7FEFFF0EAFCFFF2EBFCFFFAF7FEFFF1EAFCFFFAF8FEFFF9F5FEFFECE3FBFFFEFEFEFFFFFFFFFFFAF9F9F3FAF9F9F4FFFFFFFFFFFFFFFFE6DAFAFFAC84ECFFF5EFFDFFA278EAFFBD9DF1FFAF89EDFFAE8AEEFFD0B8F5FFBB9AF0FFCAB0F3FFF4EEFCFFFFFFFFFFF9F8F9F4F9F9F9F4FFFFFFFFF9F6FEFFA479EBFF8D5CE6FFD3BEF5FFC9AFF3FFE3D4F9FFA980EBFFAC87EEFFCAAFF4FFB592EEFFE5D9FAFFF4EFFCFFFFFFFFFFF9F8F9F4F9F8F9F4FFFFFFFFF4EEFCFFE4D6F9FFF6F3FDFFE3D6F9FFEBE1FBFFF5F0FDFFE7DBF9FFD0BBF4FFEBE0FAFFDFD0F8FFCCB3F4FFF9F7FDFFFFFFFFFFF9F9F9F4FAF9F9F4FFFFFFFFFFFFFEFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFEFFFFFFFFFFFAF9F9F4FAF9F9F4FFFFFFFFFEFDFEFFFFFEFFFFFEFEFFFFFDFDFEFFFEFEFFFFFFFFFFFFFEFEFFFFFEFDFFFFFDFDFEFFF9F8FAFFFCFBFDFFFDFDFDFFFFFFFFFFFAF9F9F4F9F8F8F4FFFFFFFFEAE8E7FFCECAC6FFE5E4E2FFE1DFDDFFD5D1CEFFE5E3E1FFE8E6E5FFEFEDECFFEBE9E8FFE6E4E2FFE5E3E2FFEFEEEDFFFFFFFFFFF9F8F8F4FAF9F9F3FFFFFFFFF8F7F7FFF1F0F0FFF5F4F3FFF2F1F0FFEEEDECFFF5F4F3FFF4F3F3FFF1F0EFFFF9F9F8FFFBFAFAFFF9F9F8FFFBFAFAFFFFFFFFFFFAFAF9F3FAF9F9F4FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFAF9F9F4FAF9F9F0FEFEFEFDFCFCFCFDFEFEFEFFFEFEFEFFFEFEFEFFFEFEFEFFFEFEFEFFFEFEFEFFFEFEFEFFFEFEFEFFFEFEFEFFFEFEFEFFFEFCFCFDFEFEFEFDFAF9F9F0F7F5F586FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF7F5F586AAAAAA03F7F5F587FAF9F9E8FBFBFAF2FAFAF9F3FAF9F9F4FAF9F9F4FAF9F9F4FAF9F9F4FAF9F9F4FAF9F9F4FAFAF9F3FBFBFAF2FAF9F9E8F7F5F587AAAAAA03</Image>
+      </Bitmap>
+    </Bitmaps>
+  </Commands>
+  <Commands package="guidAtecSourceTracePackage">
+    <Menus>
+      <Menu guid="guidAtecSourceTraceCmdSet" id="AtecSubMenu" priority="0x0100" type="Menu">
+        <Parent guid="guidAtecSourceTraceCmdSet" id="AtecMenuGroup" />
+        <Strings>
+          <ButtonText>ATEC Source Trace</ButtonText>
+        </Strings>
+      </Menu>
+      <Menu guid="guidAtecSourceTraceCmdSet" id="AtecSubMenuMain" priority="0x0100" type="Menu">
+        <Parent guid="guidAtecSourceTraceCmdSet" id="MainMenuGroup" />
+        <Strings>
+          <ButtonText>ATEC Source Trace</ButtonText>
+        </Strings>
+      </Menu>
+    </Menus>
+    <Buttons>
+      <Button guid="guidAtecSourceTraceCmdSet" id="FunctionHistoryCmd" priority="0x0100" type="Button">
+        <Parent guid="guidAtecSourceTraceCmdSet" id="AtecSubMenu" />
+        <Strings>
+          <ButtonText>함수 변경 이력 조회</ButtonText>
+        </Strings>
+      </Button>
+      <Button guid="guidAtecSourceTraceCmdSet" id="SelectionTraceCmd" priority="0x0101" type="Button">
+        <Parent guid="guidAtecSourceTraceCmdSet" id="AtecSubMenu" />
+        <Strings>
+          <ButtonText>선택 코드 변경 근거 조회</ButtonText>
+        </Strings>
+      </Button>
+      <Button guid="guidAtecSourceTraceCmdSet" id="FunctionHistoryCmdMain" priority="0x0100" type="Button">
+        <Parent guid="guidAtecSourceTraceCmdSet" id="AtecSubMenuMain" />
+        <Strings>
+          <ButtonText>함수 변경 이력 조회</ButtonText>
+        </Strings>
+      </Button>
+      <Button guid="guidAtecSourceTraceCmdSet" id="SelectionTraceCmdMain" priority="0x0101" type="Button">
+        <Parent guid="guidAtecSourceTraceCmdSet" id="AtecSubMenuMain" />
+        <Strings>
+          <ButtonText>선택 코드 변경 근거 조회</ButtonText>
+        </Strings>
+      </Button>
+      <Button guid="guidAtecSourceTraceCmdSet" id="ConfigureCmd" priority="0x0200" type="Button">
+        <Parent guid="guidAtecSourceTraceCmdSet" id="AtecSubMenuMain" />
+        <Strings>
+          <ButtonText>서버 및 장비 설정...</ButtonText>
+        </Strings>
+      </Button>
+      <Button guid="guidAtecSourceTraceCmdSet" id="CheckServerCmd" priority="0x0201" type="Button">
+        <Parent guid="guidAtecSourceTraceCmdSet" id="AtecSubMenuMain" />
+        <Strings>
+          <ButtonText>서버 연결 확인</ButtonText>
+        </Strings>
+      </Button>
+    </Buttons>
+  </Commands>
+  <Symbols>
+    <GuidSymbol name="Group_Undefined" value="{83285929-227c-11d3-b870-00c04f79f802}" />
+    <GuidSymbol name="Pkg_Undefined" value="{8328592a-227c-11d3-b870-00c04f79f802}" />
+    <GuidSymbol name="guidImages" value="{a3f42178-4d6e-4f10-c153-1d4e50617283}">
+      <IDSymbol name="bmpIcon16" value="0x0001" />
+    </GuidSymbol>
+    <GuidSymbol name="guidAtecSourceTracePackage" value="{d0c19e45-1a3b-4c8d-9e20-8a1b2c3d4e50}">
+      <IDSymbol name="ToolWindow" value="0x2000" />
+    </GuidSymbol>
+    <GuidSymbol name="guidSHLMainMenu" value="{d309f791-903f-11d0-9efc-00a0c911004f}">
+      <IDSymbol name="IDG_VS_MM_TOOLSADDINS" value="0x0104" />
+      <IDSymbol name="IDM_VS_CTXT_CODEWIN" value="0x040D" />
+    </GuidSymbol>
+    <GuidSymbol name="guidOfficeIcon" value="{d309f794-903f-11d0-9efc-00a0c911004f}">
+      <IDSymbol name="msotcidNoIcon" value="0x02EA" />
+    </GuidSymbol>
+    <GuidSymbol name="guidAtecSourceTraceCmdSet" value="{e1d20f56-2b4c-4d9e-af31-9b2c3d4e5061}">
+      <IDSymbol name="AtecMenuGroup" value="0x1020" />
+      <IDSymbol name="AtecSubMenu" value="0x1021" />
+      <IDSymbol name="AtecSubMenuMain" value="0x1022" />
+      <IDSymbol name="CheckServerCmd" value="0x0104" />
+      <IDSymbol name="ConfigureCmd" value="0x0102" />
+      <IDSymbol name="FunctionHistoryCmd" value="0x0100" />
+      <IDSymbol name="FunctionHistoryCmdMain" value="0x0110" />
+      <IDSymbol name="MainMenuGroup" value="0x1030" />
+      <IDSymbol name="SelectionTraceCmd" value="0x0101" />
+      <IDSymbol name="SelectionTraceCmdMain" value="0x0111" />
+    </GuidSymbol>
+  </Symbols>
+</CommandTable>

@@ -1,0 +1,5 @@
+<Project>
+  <PropertyGroup>
+    <IntermediateOutputPath>obj\$(Configuration)\$(TargetFramework)\</IntermediateOutputPath>
+  </PropertyGroup>
+</Project>

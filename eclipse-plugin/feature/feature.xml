@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feature
+      id="com.atec.sourcetrace.eclipse.feature"
+      label="ATEC Source Trace"
+      version="0.1.1.qualifier"
+      provider-name="ATEC Mobility">
+   <description>
+      Eclipse CDT Source Trace Plug-in. Backend v2.6 API Adapter (no server changes).
+   </description>
+   <copyright>
+      ATEC Mobility
+   </copyright>
+   <license url="https://www.eclipse.org/legal/epl-2.0/">
+      Eclipse Public License - v 2.0
+   </license>
+   <plugin
+         id="com.atec.sourcetrace.eclipse"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>
+</feature>

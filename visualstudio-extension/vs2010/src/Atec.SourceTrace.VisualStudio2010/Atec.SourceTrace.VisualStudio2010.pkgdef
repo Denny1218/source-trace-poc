@@ -1,0 +1,21 @@
+[$RootKey$\Packages\{d0c19e45-1a3b-4c8d-9e20-8a1b2c3d4e50}]
+@="AtecSourceTracePackage"
+"InprocServer32"="$WinDir$\SYSTEM32\MSCOREE.DLL"
+"Class"="Atec.SourceTrace.VisualStudio2010.AtecSourceTracePackage"
+"CodeBase"="$PackageFolder$\Atec.SourceTrace.VisualStudio2010.dll"
+[$RootKey$\AutoLoadPackages\{adfc4e64-0397-11d1-9f4e-00a0c911004f}]
+"{d0c19e45-1a3b-4c8d-9e20-8a1b2c3d4e50}"=dword:00000000
+[$RootKey$\AutoLoadPackages\{f1536ef8-8926-435c-9f60-4a504de16757}]
+"{d0c19e45-1a3b-4c8d-9e20-8a1b2c3d4e50}"=dword:00000000
+[$RootKey$\Menus]
+"{d0c19e45-1a3b-4c8d-9e20-8a1b2c3d4e50}"=", Menus.ctmenu, 2"
+[$RootKey$\ToolsOptionsPages\ATEC Source Trace]
+@="ATEC Source Trace"
+"Package"="{d0c19e45-1a3b-4c8d-9e20-8a1b2c3d4e50}"
+[$RootKey$\ToolsOptionsPages\ATEC Source Trace\General]
+@="General"
+"Package"="{d0c19e45-1a3b-4c8d-9e20-8a1b2c3d4e50}"
+"Page"="{b4053289-5e7f-4021-d264-2e5061728394}"
+[$RootKey$\ToolWindows\{f2e31067-3c5d-4e0f-b042-0c3d4e506172}]
+@="{d0c19e45-1a3b-4c8d-9e20-8a1b2c3d4e50}"
+"Name"="Atec.SourceTrace.VisualStudio2010.ToolWindows.SourceTraceToolWindow"

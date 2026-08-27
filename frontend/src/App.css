@@ -1,0 +1,98 @@
+.app-header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: #fff;
+  border-bottom: 1px solid #d0d7de;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  padding: 0.5rem 1rem;
+  background: #fff;
+}
+
+.brand-logo {
+  display: block;
+  width: 225px;
+  max-width: min(225px, 100%);
+  height: auto;
+}
+
+.app-nav {
+  display: flex;
+  gap: 0;
+  background: #24292f;
+  padding: 0 1rem;
+  flex-wrap: wrap;
+}
+
+.app-nav button {
+  padding: 0.875rem 1.25rem;
+  border: none;
+  border-radius: 0;
+  background: transparent;
+  color: #c9d1d9;
+  font-size: 0.9rem;
+  cursor: pointer;
+  border-bottom: 2px solid transparent;
+}
+
+.app-nav button:hover {
+  color: #fff;
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.app-nav button.active {
+  color: #fff;
+  border-bottom-color: #f78166;
+  font-weight: 600;
+}
+
+.tab-panel[hidden] {
+  display: none;
+}
+
+.app-toast {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  margin: 0.5rem 1rem 0;
+  padding: 0.75rem 1rem;
+  border-radius: 6px;
+  font-size: 0.9rem;
+}
+
+.app-toast.success {
+  background: #dafbe1;
+  border: 1px solid #4ac26b;
+  color: #1a7f37;
+}
+
+.app-toast.error {
+  background: #ffebe9;
+  border: 1px solid #ff8182;
+  color: #cf222e;
+}
+
+.app-toast-dismiss {
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  color: inherit;
+  font-size: 0.85rem;
+  text-decoration: underline;
+}
+
+@media (max-width: 480px) {
+  .brand-logo {
+    width: 180px;
+  }
+
+  .app-nav button {
+    padding: 0.75rem 0.85rem;
+    font-size: 0.85rem;
+  }
+}

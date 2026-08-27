@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+   <extension point="org.eclipse.ui.commands">
+      <category id="com.atec.sourcetrace.eclipse.category" name="ATEC Source Trace" description="장비 소스 변경 이력 조회"/>
+      <command id="com.atec.sourcetrace.eclipse.commands.functionHistory" name="함수 변경 이력 조회" categoryId="com.atec.sourcetrace.eclipse.category"/>
+      <command id="com.atec.sourcetrace.eclipse.commands.selectionTrace" name="선택 코드 변경 근거 조회" categoryId="com.atec.sourcetrace.eclipse.category"/>
+      <command id="com.atec.sourcetrace.eclipse.commands.configure" name="서버 및 장비 설정" categoryId="com.atec.sourcetrace.eclipse.category"/>
+      <command id="com.atec.sourcetrace.eclipse.commands.selectEquipment" name="장비 변경" categoryId="com.atec.sourcetrace.eclipse.category"/>
+      <command id="com.atec.sourcetrace.eclipse.commands.checkServer" name="서버 연결 확인" categoryId="com.atec.sourcetrace.eclipse.category"/>
+   </extension>
+
+   <extension point="org.eclipse.ui.handlers">
+      <handler commandId="com.atec.sourcetrace.eclipse.commands.functionHistory" class="com.atec.sourcetrace.eclipse.handlers.FunctionHistoryHandler"/>
+      <handler commandId="com.atec.sourcetrace.eclipse.commands.selectionTrace" class="com.atec.sourcetrace.eclipse.handlers.SelectionTraceHandler"/>
+      <handler commandId="com.atec.sourcetrace.eclipse.commands.configure" class="com.atec.sourcetrace.eclipse.handlers.ConfigureServerHandler"/>
+      <handler commandId="com.atec.sourcetrace.eclipse.commands.selectEquipment" class="com.atec.sourcetrace.eclipse.handlers.SelectEquipmentHandler"/>
+      <handler commandId="com.atec.sourcetrace.eclipse.commands.checkServer" class="com.atec.sourcetrace.eclipse.handlers.CheckServerHandler"/>
+   </extension>
+
+   <!-- No toolbar contributions. No org.eclipse.ui.commandImages.
+        Main menu: text only. Context menu parent: 16x16 icon only. -->
+   <extension point="org.eclipse.ui.menus">
+      <menuContribution locationURI="popup:org.eclipse.ui.popup.any?after=additions">
+         <menu id="com.atec.sourcetrace.eclipse.editorMenu" label="ATEC Source Trace" icon="icons/icon16.png">
+            <command commandId="com.atec.sourcetrace.eclipse.commands.functionHistory" style="push"/>
+            <command commandId="com.atec.sourcetrace.eclipse.commands.selectionTrace" style="push"/>
+            <separator name="atec.sep" visible="true"/>
+            <command commandId="com.atec.sourcetrace.eclipse.commands.configure" style="push"/>
+            <command commandId="com.atec.sourcetrace.eclipse.commands.selectEquipment" style="push"/>
+            <command commandId="com.atec.sourcetrace.eclipse.commands.checkServer" style="push"/>
+            <visibleWhen checkEnabled="false">
+               <with variable="activeEditor">
+                  <instanceof value="org.eclipse.ui.texteditor.ITextEditor"/>
+               </with>
+            </visibleWhen>
+         </menu>
+      </menuContribution>
+      <menuContribution locationURI="menu:org.eclipse.ui.main.menu?after=additions">
+         <menu id="com.atec.sourcetrace.eclipse.mainMenu" label="ATEC Source Trace">
+            <command commandId="com.atec.sourcetrace.eclipse.commands.functionHistory" style="push"/>
+            <command commandId="com.atec.sourcetrace.eclipse.commands.selectionTrace" style="push"/>
+            <separator name="atec.sep2" visible="true"/>
+            <command commandId="com.atec.sourcetrace.eclipse.commands.configure" style="push"/>
+            <command commandId="com.atec.sourcetrace.eclipse.commands.selectEquipment" style="push"/>
+            <command commandId="com.atec.sourcetrace.eclipse.commands.checkServer" style="push"/>
+         </menu>
+      </menuContribution>
+   </extension>
+
+   <extension point="org.eclipse.ui.views">
+      <category id="com.atec.sourcetrace.eclipse.views" name="ATEC Source Trace"/>
+      <view id="com.atec.sourcetrace.eclipse.ui.ResultView"
+            name="ATEC Source Trace"
+            category="com.atec.sourcetrace.eclipse.views"
+            class="com.atec.sourcetrace.eclipse.ui.ResultView"
+            icon="icons/icon16.png"
+            restorable="true"/>
+   </extension>
+
+   <extension point="org.eclipse.ui.preferencePages">
+      <page id="com.atec.sourcetrace.eclipse.prefs.page"
+            name="ATEC Source Trace"
+            class="com.atec.sourcetrace.eclipse.prefs.SourceTracePreferencePage"/>
+   </extension>
+
+   <extension point="org.eclipse.core.runtime.preferences">
+      <initializer class="com.atec.sourcetrace.eclipse.prefs.PreferenceInitializer"/>
+   </extension>
+</plugin>

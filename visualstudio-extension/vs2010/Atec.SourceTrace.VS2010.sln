@@ -1,0 +1,29 @@
+
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Atec.SourceTrace.Core", "src\Atec.SourceTrace.Core\Atec.SourceTrace.Core.csproj", "{F1A2B3C4-D5E6-4789-9012-3456789ABD01}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Atec.SourceTrace.VisualStudio2010", "src\Atec.SourceTrace.VisualStudio2010\Atec.SourceTrace.VisualStudio2010.csproj", "{F2B3C4D5-E6F7-4890-1234-56789ABCDE02}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Vs2010UnitTests", "tests\Vs2010UnitTests\Vs2010UnitTests.csproj", "{F3C4D5E6-F7A8-4901-2345-6789ABCDEF03}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F1A2B3C4-D5E6-4789-9012-3456789ABD01}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F1A2B3C4-D5E6-4789-9012-3456789ABD01}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F1A2B3C4-D5E6-4789-9012-3456789ABD01}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F1A2B3C4-D5E6-4789-9012-3456789ABD01}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F2B3C4D5-E6F7-4890-1234-56789ABCDE02}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F2B3C4D5-E6F7-4890-1234-56789ABCDE02}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F2B3C4D5-E6F7-4890-1234-56789ABCDE02}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F2B3C4D5-E6F7-4890-1234-56789ABCDE02}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F3C4D5E6-F7A8-4901-2345-6789ABCDEF03}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F3C4D5E6-F7A8-4901-2345-6789ABCDEF03}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F3C4D5E6-F7A8-4901-2345-6789ABCDEF03}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F3C4D5E6-F7A8-4901-2345-6789ABCDEF03}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,129 @@
+{
+  "name": "source-trace-vscode",
+  "displayName": "장비 변경 이력 조회 (Source Trace)",
+  "description": "선택한 소스 코드의 Git 변경 이력과 관련 변경내역서를 조회하는 VS Code Extension입니다.",
+  "version": "0.5.5",
+  "publisher": "source-trace-poc",
+  "private": true,
+  "icon": "assets/extension_icon_256.png",
+  "engines": {
+    "vscode": "^1.85.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "activationEvents": [
+    "onStartupFinished"
+  ],
+  "main": "./out/extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "sourceTrace.analyzeFunctionHistory",
+        "title": "함수 변경 이력 조회",
+        "category": "Source Trace"
+      },
+      {
+        "command": "sourceTrace.analyzeSelectedCode",
+        "title": "선택 코드 변경 근거 조회",
+        "category": "Source Trace"
+      },
+      {
+        "command": "sourceTrace.setup",
+        "title": "서버 및 장비 설정",
+        "category": "Source Trace"
+      },
+      {
+        "command": "sourceTrace.changeDevice",
+        "title": "장비 변경",
+        "category": "Source Trace"
+      },
+      {
+        "command": "sourceTrace.checkServer",
+        "title": "서버 연결 확인",
+        "category": "Source Trace"
+      },
+      {
+        "command": "sourceTrace.viewSettings",
+        "title": "현재 설정 보기",
+        "category": "Source Trace"
+      }
+    ],
+    "menus": {
+      "editor/context": [
+        {
+          "command": "sourceTrace.analyzeFunctionHistory",
+          "group": "navigation",
+          "when": "editorTextFocus"
+        },
+        {
+          "command": "sourceTrace.analyzeSelectedCode",
+          "group": "navigation",
+          "when": "editorHasSelection"
+        }
+      ],
+      "commandPalette": [
+        {
+          "command": "sourceTrace.analyzeFunctionHistory",
+          "when": "editorTextFocus"
+        },
+        {
+          "command": "sourceTrace.analyzeSelectedCode",
+          "when": "editorTextFocus"
+        }
+      ]
+    },
+    "configuration": {
+      "title": "Source Trace",
+      "properties": {
+        "sourceTrace.serverUrl": {
+          "type": ["string", "null"],
+          "default": null,
+          "description": "Source Trace 서버 주소입니다. 예: http://192.168.155.89:8010\n`Source Trace: 서버 및 장비 설정` 명령으로 자동 입력됩니다. 경로(/api/...)는 포함하지 않습니다."
+        },
+        "sourceTrace.backendUrl": {
+          "type": "string",
+          "default": "http://192.168.155.89:8010/api/trace/report",
+          "description": "(레거시) Source Trace Backend 전체 API URL. sourceTrace.serverUrl이 설정되면 이 값은 무시됩니다. 기존 설치 호환용으로 유지됩니다."
+        },
+        "sourceTrace.equipmentId": {
+          "type": ["number", "null"],
+          "default": null,
+          "description": "Source Trace 서버에 등록된 장비 ID입니다. 관리 화면(장비 관리 탭)에서 장비 ID를 확인한 뒤 입력하세요. 장비마다 다른 값을 사용하며 기본 장비는 자동 선택되지 않습니다."
+        },
+        "sourceTrace.useOllama": {
+          "type": "boolean",
+          "default": false,
+          "description": "Ollama는 서버 근거 요약을 문장화하는 보조 기능입니다. 정확한 근거 조회는 서버 Evidence 기반으로 수행됩니다. true로 켜면 AI 보조 설명 생성을 시도하지만 응답이 느려질 수 있습니다."
+        },
+        "sourceTrace.maxSelectedCodeChars": {
+          "type": "number",
+          "default": 4000,
+          "description": "Backend로 전송할 선택 코드의 최대 문자 수. 전체 파일 전송을 방지하기 위해 이 길이를 초과하면 잘라서 전송합니다."
+        },
+        "sourceTrace.showDebug": {
+          "type": "boolean",
+          "default": false,
+          "description": "true면 결과 Markdown 하단에 Extension debug를 접힌 형태로 표시합니다. 기본값은 false입니다."
+        },
+        "sourceTrace.diagnosticLogging": {
+          "type": "boolean",
+          "default": false,
+          "description": "true면 Source Trace Output에 민감하지 않은 진단 정보(선택 모드, 문자 수 등)를 추가로 출력합니다. 선택 코드 원문·전체 Diff·인증정보는 출력하지 않습니다. 기본값은 false입니다."
+        }
+      }
+    }
+  },
+  "scripts": {
+    "compile": "tsc -p ./",
+    "watch": "tsc -w -p ./",
+    "pretest": "npm run compile",
+    "test": "node --test ./out/test/requestBuilder.test.js ./out/test/symbolExtractor.test.js ./out/test/editorContext.test.js ./out/test/progressLog.test.js ./out/test/equipmentVerifier.test.js ./out/test/serverConfig.test.js ./out/test/setupWizard.test.js ./out/test/repoPathResolver.test.js ./out/test/commandConsistency.test.js ./out/test/brandAssets.test.js",
+    "package:vsix": "npm run compile && npx --yes @vscode/vsce package --allow-missing-repository --no-dependencies -o ../산출물/운영PC/VSCode-Extension/source-trace-vscode-0.5.5.vsix"
+  },
+  "devDependencies": {
+    "@types/node": "^20.11.0",
+    "@types/vscode": "^1.85.0",
+    "typescript": "^5.4.5"
+  }
+}

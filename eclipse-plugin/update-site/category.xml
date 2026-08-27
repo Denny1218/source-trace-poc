@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<site>
+  <description name="ATEC Source Trace">
+    Offline p2 update site for ATEC Source Trace Eclipse Plug-in (Backend v2.6 Adapter).
+  </description>
+  <feature id="com.atec.sourcetrace.eclipse.feature" version="0.0.0">
+    <category name="ATEC Source Trace"/>
+  </feature>
+  <category-def name="ATEC Source Trace" label="ATEC Source Trace"/>
+</site>

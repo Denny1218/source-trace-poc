@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<site>
+   <!-- Populate via Eclipse PDE Export → Update Site.
+        Feature: com.atec.sourcetrace.eclipse.feature 0.1.0.qualifier -->
+   <description name="ATEC Source Trace">
+      Offline update site for ATEC Source Trace Eclipse Plug-in (Backend v2.6 Adapter).
+   </description>
+   <feature url="features/com.atec.sourcetrace.eclipse.feature_0.1.0.jar" id="com.atec.sourcetrace.eclipse.feature" version="0.1.0">
+      <category name="ATEC Source Trace"/>
+   </feature>
+   <category-def name="ATEC Source Trace" label="ATEC Source Trace"/>
+</site>

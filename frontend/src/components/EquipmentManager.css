@@ -1,0 +1,370 @@
+.equipment-manager {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+.equipment-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 0.75rem;
+  margin-bottom: 0.75rem;
+}
+
+.equipment-header h1 {
+  margin: 0 0 0.2rem;
+  font-size: 1.35rem;
+}
+
+.hint {
+  margin: 0;
+  color: #5c6370;
+  font-size: 0.82rem;
+}
+
+.equipment-form-card,
+.equipment-list-card {
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  padding: 0.85rem;
+  margin-bottom: 0.85rem;
+}
+
+.equipment-form-card h2,
+.equipment-list-card h2 {
+  margin: 0 0 0.65rem;
+  font-size: 1.05rem;
+}
+
+.equipment-form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.55rem;
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: 120px minmax(0, 1fr);
+  gap: 0.55rem;
+  align-items: start;
+}
+
+.form-label {
+  font-weight: 600;
+  font-size: 0.82rem;
+  padding-top: 0.42rem;
+  color: #24292f;
+}
+
+.form-field-stack {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  min-width: 0;
+}
+
+.equipment-form input[type="text"],
+.equipment-form select,
+.repo-form input[type="text"],
+.repo-form select {
+  padding: 0.38rem 0.55rem;
+  border: 1px solid #d0d7de;
+  border-radius: 6px;
+  font-size: 0.82rem;
+  width: 100%;
+}
+
+.path-row {
+  display: flex;
+  gap: 0.35rem;
+  align-items: center;
+  min-width: 0;
+}
+
+.path-row input {
+  flex: 1;
+  min-width: 0;
+}
+
+.validate-ok {
+  color: #22863a;
+  font-size: 0.8rem;
+  font-weight: 400;
+}
+
+.validate-error {
+  color: #cb2431;
+  font-size: 0.8rem;
+  font-weight: 400;
+}
+
+.form-actions {
+  display: flex;
+  gap: 0.45rem;
+  margin-top: 0.15rem;
+}
+
+.form-banner {
+  margin: 0;
+}
+
+.banner {
+  padding: 0.55rem 0.75rem;
+  border-radius: 8px;
+  margin-bottom: 0.75rem;
+  font-size: 0.85rem;
+}
+
+.banner.error {
+  background: #fff5f5;
+  border: 1px solid #feb2b2;
+  color: #c53030;
+}
+
+.banner.notice {
+  background: #fff8e6;
+  border: 1px solid #f6e05e;
+  color: #744210;
+}
+
+button {
+  padding: 0.34rem 0.7rem;
+  border: 1px solid #d0d7de;
+  border-radius: 6px;
+  background: #fff;
+  cursor: pointer;
+  font-size: 0.82rem;
+  line-height: 1.25;
+  white-space: nowrap;
+}
+
+button:hover:not(:disabled) {
+  background: #f6f8fa;
+}
+
+button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.btn-primary {
+  background: #0969da;
+  border-color: #0969da;
+  color: #fff;
+}
+
+.btn-primary:hover:not(:disabled) {
+  background: #0550ae;
+}
+
+.btn-danger {
+  color: #cb2431;
+  border-color: #feb2b2;
+}
+
+.empty {
+  color: #6a737d;
+  font-size: 0.82rem;
+  margin: 0.25rem 0;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.82rem;
+}
+
+th,
+td {
+  padding: 0.45rem 0.4rem;
+  text-align: left;
+  border-bottom: 1px solid #eef0f3;
+}
+
+th {
+  font-weight: 600;
+  color: #444;
+}
+
+.path-cell {
+  max-width: 320px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  font-family: Consolas, monospace;
+  font-size: 0.78rem;
+}
+
+.col-id {
+  width: 48px;
+  min-width: 40px;
+  text-align: center;
+  color: #666;
+  font-variant-numeric: tabular-nums;
+}
+
+.form-id-readonly {
+  display: inline-block;
+  padding: 0.25rem 0.5rem;
+  background: #f4f5f7;
+  border: 1px solid #dde0e6;
+  border-radius: 4px;
+  color: #555;
+  font-size: 0.85rem;
+  font-variant-numeric: tabular-nums;
+  cursor: default;
+  user-select: text;
+}
+
+.actions {
+  white-space: nowrap;
+}
+
+.actions button {
+  margin-right: 0.2rem;
+}
+
+.repo-section {
+  margin-top: 0.35rem;
+  padding-top: 0.55rem;
+  border-top: 1px solid #eef0f3;
+  grid-column: 1 / -1;
+}
+
+.repo-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.45rem;
+}
+
+.repo-header h3 {
+  margin: 0;
+  font-size: 0.92rem;
+}
+
+.repo-list {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 0.45rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+}
+
+.repo-row {
+  display: grid;
+  grid-template-columns: 120px 70px minmax(0, 1fr) 80px auto;
+  gap: 0.45rem;
+  align-items: center;
+  border: 1px solid #e1e4e8;
+  border-radius: 6px;
+  padding: 0.35rem 0.5rem;
+  font-size: 0.78rem;
+}
+
+.repo-row-name {
+  font-weight: 600;
+}
+
+.repo-row-path {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  font-family: Consolas, monospace;
+}
+
+.repo-row-status {
+  color: #57606a;
+}
+
+.repo-row-actions {
+  display: flex;
+  gap: 0.25rem;
+  justify-content: flex-end;
+}
+
+.repo-form {
+  border: 1px dashed #d0d7de;
+  border-radius: 8px;
+  padding: 0.65rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.45rem;
+  margin-top: 0.35rem;
+}
+
+.repo-form h4 {
+  margin: 0;
+  font-size: 0.88rem;
+}
+
+.repo-form-grid {
+  display: grid;
+  grid-template-columns: 1fr 160px;
+  gap: 0.45rem;
+}
+
+.repo-form label {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  font-size: 0.8rem;
+  font-weight: 500;
+}
+
+.field-help {
+  color: #57606a;
+  font-size: 0.75rem;
+  font-weight: 400;
+}
+
+.repo-progress-panel {
+  margin: 0.75rem 0;
+  padding: 0.875rem 1rem;
+  border: 1px solid #d0d7de;
+  border-radius: 6px;
+  background: #f6f8fa;
+}
+
+.repo-progress-panel ul {
+  margin: 0.5rem 0 0;
+  padding-left: 1.25rem;
+}
+
+.repo-progress-running {
+  color: #0969da;
+}
+
+.repo-progress-done {
+  color: #1a7f37;
+}
+
+.repo-progress-error {
+  color: #cf222e;
+}
+
+@media (max-width: 900px) {
+  .form-row {
+    grid-template-columns: 1fr;
+  }
+
+  .form-label {
+    padding-top: 0;
+  }
+
+  .repo-row {
+    grid-template-columns: 1fr;
+    gap: 0.25rem;
+  }
+
+  .repo-row-actions {
+    justify-content: flex-start;
+  }
+
+  .repo-form-grid {
+    grid-template-columns: 1fr;
+  }
+}

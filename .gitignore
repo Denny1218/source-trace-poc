@@ -1,0 +1,80 @@
+# Secrets / local env
+.env
+.env.*
+!.env.example
+
+# Python
+.venv/
+**/__pycache__/
+**/*.py[cod]
+.pytest_cache/
+*.egg-info/
+.mypy_cache/
+.ruff_cache/
+
+# Node
+**/node_modules/
+npm-debug.log*
+yarn-error.log*
+
+# Runtime / local data (never ship DB)
+data/
+logs/
+**/*.db
+**/*.db-wal
+**/*.db-shm
+**/repositories/
+
+# Build / IDE junk
+**/dist/
+!산출물/**/dist/
+**/.vs/
+**/bin/
+**/obj/
+**/out/
+**/.tools/
+**/*.user
+**/*.suo
+*.swp
+.DS_Store
+Thumbs.db
+
+# Cursor / editor
+.cursor/
+.vscode/
+*.code-workspace
+
+# VS extension local SDK / probes (not source)
+visualstudio-extension/.tools/
+visualstudio-extension/**/MenuProbe/
+visualstudio-extension/**/ControlTest/
+visualstudio-extension/**/build-*/
+
+# Large / non-deliverable local trees
+diag-tools/
+_step10_backup_*/
+offline_packages/
+sample/
+test_sample/
+image/
+deploy/
+tests/
+*.zip
+!산출물/**/*.zip
+!산출물/**/*.vsix
+!최종제출본/**/*.zip
+!최종제출본/**/*.vsix
+
+# Temp / personal drafts
+_aica_*
+_*.txt
+**/AICA_*.docx
+STEP6_운영환경_1차_테스트_가이드.docx
+
+# Conversation archive (별도 제출본에만; 소스 저장소에서는 제외)
+산출물/대화기록/
+최종제출본/**/05_대화기록/
+
+# Python bytecode / coverage
+.coverage
+htmlcov/

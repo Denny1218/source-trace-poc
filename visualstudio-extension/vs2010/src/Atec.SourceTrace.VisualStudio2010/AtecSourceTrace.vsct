@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CommandTable xmlns="http://schemas.microsoft.com/VisualStudio/2005-10-18/CommandTable" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+  <Extern href="stdidcmd.h"/>
+  <Extern href="vsshlids.h"/>
+
+  <Commands package="guidAtecSourceTracePackage">
+    <Groups>
+      <Group guid="guidAtecSourceTraceCmdSet" id="AtecMenuGroup" priority="0x0600">
+        <Parent guid="guidSHLMainMenu" id="IDM_VS_CTXT_CODEWIN"/>
+      </Group>
+      <Group guid="guidAtecSourceTraceCmdSet" id="AtecSubMenuGroup" priority="0x0100">
+        <Parent guid="guidAtecSourceTraceCmdSet" id="AtecSubMenu"/>
+      </Group>
+      <Group guid="guidAtecSourceTraceCmdSet" id="MainMenuGroup" priority="0x0600">
+        <Parent guid="guidSHLMainMenu" id="IDM_VS_MENU_TOOLS"/>
+      </Group>
+      <Group guid="guidAtecSourceTraceCmdSet" id="AtecSubMenuMainGroup" priority="0x0100">
+        <Parent guid="guidAtecSourceTraceCmdSet" id="AtecSubMenuMain"/>
+      </Group>
+    </Groups>
+
+    <Menus>
+      <Menu guid="guidAtecSourceTraceCmdSet" id="AtecSubMenu" priority="0x0100" type="Menu">
+        <Parent guid="guidAtecSourceTraceCmdSet" id="AtecMenuGroup"/>
+        <Icon guid="guidImages" id="bmpIcon16"/>
+        <Strings>
+          <ButtonText>ATEC Source Trace</ButtonText>
+        </Strings>
+      </Menu>
+      <Menu guid="guidAtecSourceTraceCmdSet" id="AtecSubMenuMain" priority="0x0100" type="Menu">
+        <Parent guid="guidAtecSourceTraceCmdSet" id="MainMenuGroup"/>
+        <Strings>
+          <ButtonText>ATEC Source Trace</ButtonText>
+        </Strings>
+      </Menu>
+    </Menus>
+
+    <Buttons>
+      <Button guid="guidAtecSourceTraceCmdSet" id="FunctionHistoryCmd" priority="0x0100" type="Button">
+        <Parent guid="guidAtecSourceTraceCmdSet" id="AtecSubMenuGroup"/>
+        <Strings>
+          <ButtonText>함수 변경 이력 조회</ButtonText>
+        </Strings>
+      </Button>
+      <Button guid="guidAtecSourceTraceCmdSet" id="SelectionTraceCmd" priority="0x0101" type="Button">
+        <Parent guid="guidAtecSourceTraceCmdSet" id="AtecSubMenuGroup"/>
+        <Strings>
+          <ButtonText>선택 코드 변경 근거 조회</ButtonText>
+        </Strings>
+      </Button>
+      <Button guid="guidAtecSourceTraceCmdSet" id="FunctionHistoryCmdMain" priority="0x0100" type="Button">
+        <Parent guid="guidAtecSourceTraceCmdSet" id="AtecSubMenuMainGroup"/>
+        <Strings>
+          <ButtonText>함수 변경 이력 조회</ButtonText>
+        </Strings>
+      </Button>
+      <Button guid="guidAtecSourceTraceCmdSet" id="SelectionTraceCmdMain" priority="0x0101" type="Button">
+        <Parent guid="guidAtecSourceTraceCmdSet" id="AtecSubMenuMainGroup"/>
+        <Strings>
+          <ButtonText>선택 코드 변경 근거 조회</ButtonText>
+        </Strings>
+      </Button>
+      <Button guid="guidAtecSourceTraceCmdSet" id="ConfigureCmd" priority="0x0200" type="Button">
+        <Parent guid="guidAtecSourceTraceCmdSet" id="AtecSubMenuMainGroup"/>
+        <Strings>
+          <ButtonText>서버 및 장비 설정...</ButtonText>
+        </Strings>
+      </Button>
+      <Button guid="guidAtecSourceTraceCmdSet" id="CheckServerCmd" priority="0x0201" type="Button">
+        <Parent guid="guidAtecSourceTraceCmdSet" id="AtecSubMenuMainGroup"/>
+        <Strings>
+          <ButtonText>서버 연결 확인</ButtonText>
+        </Strings>
+      </Button>
+    </Buttons>
+
+    <Bitmaps>
+      <Bitmap guid="guidImages" href="Icons\icon16.png" usedList="bmpIcon16"/>
+    </Bitmaps>
+  </Commands>
+
+  <Symbols>
+    <GuidSymbol name="guidAtecSourceTracePackage" value="{d0c19e45-1a3b-4c8d-9e20-8a1b2c3d4e50}">
+      <IDSymbol name="ToolWindow" value="0x2000"/>
+    </GuidSymbol>
+    <GuidSymbol name="guidAtecSourceTraceCmdSet" value="{e1d20f56-2b4c-4d9e-af31-9b2c3d4e5061}">
+      <IDSymbol name="AtecMenuGroup" value="0x1020"/>
+      <IDSymbol name="AtecSubMenu" value="0x1021"/>
+      <IDSymbol name="AtecSubMenuMain" value="0x1022"/>
+      <IDSymbol name="AtecSubMenuGroup" value="0x1023"/>
+      <IDSymbol name="AtecSubMenuMainGroup" value="0x1024"/>
+      <IDSymbol name="MainMenuGroup" value="0x1030"/>
+      <IDSymbol name="FunctionHistoryCmd" value="0x0100"/>
+      <IDSymbol name="SelectionTraceCmd" value="0x0101"/>
+      <IDSymbol name="ConfigureCmd" value="0x0102"/>
+      <IDSymbol name="CheckServerCmd" value="0x0104"/>
+      <IDSymbol name="FunctionHistoryCmdMain" value="0x0110"/>
+      <IDSymbol name="SelectionTraceCmdMain" value="0x0111"/>
+    </GuidSymbol>
+    <GuidSymbol name="guidImages" value="{a3f42178-4d6e-4f10-c153-1d4e50617283}">
+      <IDSymbol name="bmpIcon16" value="0x0001"/>
+    </GuidSymbol>
+  </Symbols>
+</CommandTable>
