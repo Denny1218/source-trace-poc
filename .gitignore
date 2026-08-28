@@ -62,8 +62,21 @@ tests/
 *.zip
 !산출물/**/*.zip
 !산출물/**/*.vsix
-!최종제출본/**/*.zip
-!최종제출본/**/*.vsix
+
+# Local submission packages (not in git — use 산출물/ instead)
+최종제출본/
+
+# Dev-only under 산출물
+산출물/개발진단/
+산출물/대화기록/
+산출물/보고서_*
+산출물/**/이전버전/
+산출물/**/test.txt
+산출물/**/*-SOURCE.zip
+산출물/**/*menuprobe*.vsix
+산출물/**/*controltest*.vsix
+산출물/**/*probe*.vsix
+산출물/**/*NOT-OFFICIAL*
 
 # Temp / personal drafts
 _aica_*
@@ -71,9 +84,23 @@ _*.txt
 **/AICA_*.docx
 STEP6_운영환경_1차_테스트_가이드.docx
 
-# Conversation archive (별도 제출본에만; 소스 저장소에서는 제외)
-산출물/대화기록/
-최종제출본/**/05_대화기록/
+# Old PROJECT_SPEC (repo keeps v2.6 only)
+AI_기반_장비_소스_변경_이력_추적_및_유지보수_지원_POC_PROJECT_SPEC.md
+AI_기반_장비_소스_변경_이력_추적_및_유지보수_지원_POC_PROJECT_SPEC_v2.md
+AI_기반_장비_소스_변경_이력_추적_및_유지보수_지원_POC_PROJECT_SPEC_v2.1.md
+AI_기반_장비_소스_변경_이력_추적_및_유지보수_지원_POC_PROJECT_SPEC_v2.1_현행화_보완명세.md
+AI_기반_장비_소스_변경_이력_추적_및_유지보수_지원_POC_PROJECT_SPEC_v2.2.md
+AI_기반_장비_소스_변경_이력_추적_및_유지보수_지원_POC_PROJECT_SPEC_v2.3.md
+AI_기반_장비_소스_변경_이력_추적_및_유지보수_지원_POC_PROJECT_SPEC_v2.4.md
+AI_기반_장비_소스_변경_이력_추적_및_유지보수_지원_POC_PROJECT_SPEC_v2.5.md
+AI_기반_장비_소스_변경_이력_추적_및_유지보수_지원_POC_PROJECT_SPEC_v2.5.1.md
+
+# Dev-only docs / scripts
+TEST_PLAN.md
+scripts/_fill_aica_application.py
+scripts/_pack_final_submission.py
+scripts/_pack_final_submission_by_role.py
+scripts/export_conversation_archive.py
 
 # Python bytecode / coverage
 .coverage
